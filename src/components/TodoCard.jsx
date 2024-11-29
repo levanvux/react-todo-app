@@ -3,7 +3,7 @@ export const TodoCard = React.memo((props) => {
     const { todo, handleCompleteTodo, handleDeleteTodo } = props;
     return (
         <div className="card todo-item">
-            <p>{todo.input}</p>
+            <p style={{ textDecoration: todo.complete ? "line-through" : "none" }}>{todo.input}</p>
             <div className="todo-buttons">
                 {/* 
                 James teaches me *
@@ -17,6 +17,6 @@ export const TodoCard = React.memo((props) => {
                     <h6>Delete</h6>
                 </button>
             </div>
-        </div>
+        </div >
     );
 });
